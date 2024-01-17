@@ -1,0 +1,43 @@
+(define (juntar vetor1 vetor2)
+    (define v3 (make-vector (+ (vector-length vetor1) (vector-length vetor2))))
+    
+    (display "Vetor 1 = ")
+    (let loop ((index 0))
+        (if (= index (vector-length vetor1))
+            (display "\n")
+            (begin
+                (display (vector-ref vetor1 index))
+                (display " ")
+                (vector-set! v3 index (vector-ref vetor1 index))
+                (loop (+ index 1))
+			)
+		)
+	)
+
+    (display "Vetor 2 = ")
+    (let loop ((index 0))
+        (if (= index (vector-length vetor2))
+            (display "\n")
+            (begin
+                (display (vector-ref vetor2 index))
+                (display " ")
+                (vector-set! v3 (+ (vector-length vetor2) index) (vector-ref vetor2 index))
+                (loop (+ index 1))
+			)
+		)
+	)
+
+    (display "Vetor 3 = ")
+    (let loop ((index (vector-length v3)))
+        (if (= index 0)
+            (display "")
+            (begin
+                (display (vector-ref v3 (- index 1)))
+                (display " ")
+                (loop (- index 1))
+			)
+		)
+	)
+)
+
+(juntar (vector 1 2 3) (vector 4 5 6))
