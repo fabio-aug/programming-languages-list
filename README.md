@@ -1,2 +1,2 @@
 # programming-languages-list
-Listas I e II de Linguagens de Programação
+Listas I e II de Linguagens de Programação - Scheme e Prolog.
