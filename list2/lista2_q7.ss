@@ -1,0 +1,45 @@
+(define (all_functions )
+    (let atv1 ((x 2))
+        (display "Questão 1:")
+        (newline)
+        (display "y = 5x^3 + x^2 + 3x + 100 => ")
+    	(display (
+    		+
+    		(* (expt x 3) 5)
+    		(expt x 2)
+    		(* x 3)
+    		100
+    	))
+    )
+    
+    (newline)
+    (newline)
+
+    (let atv2 ((a 10) (b 2))
+        (display "Questão 2:")
+        (newline)
+        (display "Volume da pirâmide: ")
+        (display (/ (* a b) 3))
+    )
+    
+    (newline)
+    (newline)
+
+    (let atv3 ((a 41) (b 2))
+        (display "Questão 3:")
+        (newline)
+        (display "Salário final: ")
+        (if (> a 200)
+            (display (+ (* a b) (* b (/ 150 100))))
+            (if (> a 120)
+                (display (+ (* a b) (* (* a b) (/ 80 100))))
+                (if (> a 40)
+                    (display (+ (* a b) (* (* a b) (/ 40 100))))
+                    (display (* a b))
+                )
+            )
+        )
+	)
+)
+
+(all_functions)
