@@ -9,4 +9,3 @@
 
 (display "Salário final: ")
 (display (salario 41 2))
-(newline)
