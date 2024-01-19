@@ -3,4 +3,3 @@
 
 (display "Volume da pirâmide: ");
 (display(piramide 10 2));
-(newline)
