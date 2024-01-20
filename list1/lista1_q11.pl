@@ -6,5 +6,5 @@ reinou(hywal_ap_ieuaf, 979, 985).
 reinou(cadwallon, 985, 986).
 reinou(maredudd, 986, 989).
 
-rei_entre(X, Y, Z) :- reinou(X, Y, Z).
-rei_ano(X, Y) :- reinou(X, A, B), Y > A, Y < B.
+rei_entre(X, INICIO, FIM) :- reinou(X, Y, Z), Y >= INICIO, Z =< FIM.
+rei_ano(X, ANO) :- reinou(X, A, B), ANO >= A, ANO =< B.
